@@ -1,0 +1,20 @@
+# TYPES (KEYWORD1)
+VirtualWire	KEYWORD1
+
+# FUNCTIONS (KEYWORD2)
+vw_set_rx_inverted KEYWORD2
+vw_set_ptt_inverted KEYWORD2
+vw_setup KEYWORD2
+vw_rx_start KEYWORD2
+vw_rx_stop KEYWORD2
+w_tx_active KEYWORD2
+vw_wait_tx KEYWORD2
+vw_wait_rx KEYWORD2
+vw_wait_rx_max KEYWORD2
+vw_send KEYWORD2
+vw_have_message KEYWORD2
+vw_get_message KEYWORD2
+vw_get_rx_good KEYWORD2
+vw_get_rx_bad KEYWORD2
+
+# CONSTANTS (LITERAL1)

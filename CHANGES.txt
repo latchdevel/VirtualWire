@@ -1,0 +1,35 @@
+# Revision History
+
+- version 1.0  Original release
+- version 1.1  2008-06-24 Now can compile for atmega8. Reported by creatrope
+- version 1.2  2009-03-30 Fixed a problem that prevented compiling with arduino-0015. Reported by Jaime Castro
+- version 1.3  2009-04-01 Fixed a compatibility problem with ATMEGA328 of the new arduino
+               Now use SIGNAL(TIMER1_COMPA_vect) instead of ISR(SIG_OUTPUT_COMPARE1A)
+               as discussed in http://www.arduino.cc/cgi-bin/yabb2/YaBB.pl?num=1237714550/11 and reported by Jaime Castro.
+- version 1.4  2010-01-29 Added vx_tx_active(), suggested by Alan Burlison.
+- version 1.5  2011-09-09 Added vx_tx_active() function.
+- version 1.6  2012-01-10 Fixed a problem where the receiver was always reenabled after transmission. Reported by David Bath
+- version 1.9  2012-02-07 Documentation updates
+- version 1.10 Updated CHANGES file with changes since 1.4.
+- version 1.11 Converted documentation to Doxygen. Moved CHANGES log to this version history. Ensure vw_rx_pin is not accessed unless receiver is enabled
+- version 1.12 Compiles and runs on on Energia with MSP430G2553 / G2452 and Arduino with ATMega328. Patches contributed by Yannick DEVOS - XV4Y
+- version 1.13 util/crc16.h needed for compiling on  Energia with MSP430G2553 / G2452 was accidentally left out of the distribution
+- version 1.14 Added support ATtiny85 on Arduino, patch provided by r4z0r7o3.
+- version 1.15 Updated author and distribution location details to airspayce.com
+- version 1.16 Added support for Teensy 3.0, contributed by Paul Stoffregen.
+- version 1.17 Increase default MAX_MESSAGE_LENGTH to 80. Added vw_get_rx_good() and vw_get_rx_bad() functions.
+- version 1.18 Added support for Maple, Flymaple etc with STM32F103RE processor using timer 1.
+               Tested with Flymaple 1.1 and maple-ide-v0.0.12
+- version 1.19 Added new function vw_rx_inverted(), to allow the incoming RX to be inverted (normally high).
+               Minor improvements to timer setup for Maple. Name vw_tx_active() changed from incorrect vx_tx_active()
+- version 1.20 Added support for ATtiny84, patched by Chuck Benedict.
+- version 1.21 Added support for most AVR8 platforms with proper configuration, without depending
+               on Arduino environment, such as Atmega32u2, Atmega32U4, At90USB162 etc,  contributed by Alexandru Daniel Mircescu. 
+- version 1.22 Alexandru Daniel Mircescu fixed some problems with the recently added AtMega32U2 support.
+- version 1.23 Fixed some errors and inaccuracies in documentation, with the kind assistance of Alexandru Mircescu.
+- version 1.24 Minor performance improvement to vw_symbol_6to4() courtesy Ralph Doncaster.
+- version 1.25 Removed all use of floating point code, with assistance of a patch from Jim Remington. Result is smaller code size.
+- version 1.26 Removed util/crc16.h from distribution, since it is now included in arduino IDE since version 1.0. 
+               Support for arduino IDE prior to 1.0 is now abandoned.
+- version 1.27 Reinstated VWutil/crc16.h for the benefit of other platforms such as Teensy.Testing on Teensy 3.1. 
+               Added End Of Life notice. This library will no longer be maintained and updated: use RadioHead instead.
